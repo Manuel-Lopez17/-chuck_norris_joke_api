@@ -1,36 +1,112 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🥋 Chuck Norris Joke App
 
-## Getting Started
+A simple app built with **Next.js 15.3**, **TypeScript**, and **Tailwind CSS** that lets you fetch random Chuck Norris jokes, add your favorites, rate them, and sort by rating.
 
-First, run the development server:
+> Made by Manuel Lopez
+
+---
+
+## 🚀 Features
+
+- 🔀 Fetch jokes from the Chuck Norris API
+- 💾 Save jokes to favorites (using `localStorage`)
+- ⭐ Rate each favorite
+- 📊 Sort by rating (asc/desc)
+- 📋 Sticky table headers
+- 🔔 Toast notifications for success & error
+- 🧼 Prettier formatting support
+- 🔥 Built with the new App Router (Next.js 15)
+
+---
+
+## 📦 Tech Stack
+
+- Next.js 15.3
+- TypeScript
+- Tailwind CSS
+- React Hot Toast
+- LocalStorage
+- pnpm (as package manager)
+
+---
+
+## 🛠️ Setup Instructions
+
+### 1. Clone the repository
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/manuel-lopez/chuck-norris-jokes.git
+cd chuck-norris-jokes
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 2. Install dependencies
+```bash
+pnpm install
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+#### 2.1 If you don't have pnpm installed
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm install -g pnpm
+```
 
-## Learn More
+### 3. Run the development server
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+pnpm dev
+```
+---
+## 🧪 Useful Scripts
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+pnpm dev       # Run the development server
+pnpm build     # Create an optimized production build
+pnpm lint      # Run ESLint
+pnpm format    # Format all files using Prettier
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+## 📝 Notes About the Implementation
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- The project uses localStorage to persist favorite jokes across sessions.
+- Prevents duplicate jokes from being added.
+- Automatically fetches a new joke after a successful addition.
+- Toast messages appear for both success and error events.
+- The favorite list uses a sticky table header when it overflows.
+- Cleanly structured for scalability and readability.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+## 📁 Folder Overview
+
+├── app/
+│   ├── page.tsx               # Home page
+│   ├── favorites/page.tsx     # Favorite jokes list
+│   ├── layout.tsx             # General Layout
+│   └── globals.css            # General styles
+├── components/
+│   ├── JokeCard.tsx           # Random joke display
+│   ├── FavoriteItem.tsx       # Row in the favorite table
+│   ├── FavoriteList.tsx       # Favorites table
+│   └── Footer.tsx             # General Info
+├── lib/
+│   └── favorites.ts           # LocalStorage logic
+└── public/
+
+---
+
+## 👤 Author Implementation Notes
+
+I chose this approach to clearly separate the responsibilities of each component and page.
+
+I used **Tailwind CSS** because I have experience with it, and it significantly speeds up app development.
+
+I added controls to prevent the same joke from being added more than once (in case the API returns it again), and included **toast notifications** to improve the user experience.
+
+Additionally, I assigned **IDs to the jokes in the favorites list** to have better control and management over them.
+
+This project uses **PNPM** as the package manager for its speed and performance benefits.
+
+
+
