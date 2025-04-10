@@ -35,7 +35,7 @@ A simple app built with **Next.js 15.3**, **TypeScript**, and **Tailwind CSS** t
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/manuel-lopez/chuck-norris-jokes.git
+git clone https://github.com/Manuel-Lopez17/-chuck_norris_joke_api.git
 cd chuck-norris-jokes
 ```
 
@@ -75,24 +75,6 @@ pnpm format    # Format all files using Prettier
 - Toast messages appear for both success and error events.
 - The favorite list uses a sticky table header when it overflows.
 - Cleanly structured for scalability and readability.
-
----
-
-## 📁 Folder Overview
-
-├── app/
-│   ├── page.tsx               # Home page
-│   ├── favorites/page.tsx     # Favorite jokes list
-│   ├── layout.tsx             # General Layout
-│   └── globals.css            # General styles
-├── components/
-│   ├── JokeCard.tsx           # Random joke display
-│   ├── FavoriteItem.tsx       # Row in the favorite table
-│   ├── FavoriteList.tsx       # Favorites table
-│   └── Footer.tsx             # General Info
-├── lib/
-│   └── favorites.ts           # LocalStorage logic
-└── public/
 
 ---
 
